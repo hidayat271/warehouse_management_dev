@@ -246,6 +246,36 @@
               }
         });
 
+        $('#custom-product-stock-opname .typeahead').on('typeahead:selected', function(evt, item) {
+              var barcode = item.code;
+
+                $.ajax
+                ({
+                  type: "GET",
+                  url: base+"stock_op_name/get_by_barcode?barcode=" + barcode,
+                  success: function(data)
+                  {
+                     $("#data-cart").html('');
+                     $("#data-cart").append(data);
+                  }
+                });
+        });
+
+        //Custom Template
+        $('#custom-product-stock-opname .typeahead').typeahead(null, {
+              name: 'code-location',
+              display: 'code',
+              source: data_product,
+              templates: {
+                empty: [
+                  '<div class="tt-dataset tt-dataset-countries">',
+                    '<div class="tt-suggestion tt-selectable">Tidak dapat menemukan data</div>',
+                  '</div>'
+                ].join('\n'),
+                suggestion: Handlebars.compile('<div class="tt-suggestion tt-selectable">{{code}} – {{name}}</div>')
+              }
+        });
+
 
 
     });

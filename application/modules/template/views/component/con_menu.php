@@ -27,6 +27,10 @@
                 <a href="<?php echo base_url('inventory') ?>">Inventory List</a>
                 <span class="icon-thumbnail">iL</span>
             </li>
+            <li>
+                <a href="<?php echo base_url('stock_op_name/action') ?>">Stock Op Name</a>
+                <span class="icon-thumbnail">Son</span>
+            </li>
         </ul>
     </li> 
   <li class="">

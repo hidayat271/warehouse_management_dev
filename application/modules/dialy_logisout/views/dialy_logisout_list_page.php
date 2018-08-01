@@ -5,8 +5,8 @@
       <!-- START BREADCRUMB -->
       <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Logistik</a></li>
-        <li class="breadcrumb-item"><a href="#">Logistik In</a></li>
-        <li class="breadcrumb-item active">Daily Logistik In</li>
+        <li class="breadcrumb-item"><a href="#">Logistik Out</a></li>
+        <li class="breadcrumb-item active">Daily Logistik Out</li>
       </ol>
       <!-- END BREADCRUMB -->
     </div>
@@ -23,8 +23,7 @@
           <thead>
             <tr>
               <th style="width:15%">No Faktur</th>
-              <th style="width:15%">Faktur Supplier</th>
-              <th style="width:30%">Supplier</th>
+              <th style="width:30%">Request To</th>
               <th style="width:20%">Tanggal Draft</th>
               <th style="width:15%">Tanggal Approve</th>
             </tr>
@@ -40,10 +39,7 @@
                 <p><?php echo $logisin->code; ?></p>
               </td>
               <td class="v-align-middle">
-                <p><?php echo $logisin->faktur; ?></p>
-              </td>
-              <td class="v-align-middle">
-                <p><?php echo $logisin->supplier; ?></p>
+                <p><?php echo $logisin->request_to_store; ?></p>
               </td>
               <td class="v-align-middle">
                 <p><?php echo $logisin->draft_at; ?></p>
